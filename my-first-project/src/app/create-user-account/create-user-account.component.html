@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <form [formGroup]="createAccount_Form"  novalidate >
+
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" formControlName="login_Name" [ngClass]="{ 'is-invalid': account_Submitted && CAc_Form['login_Name'].errors }">
+        </div>
+        <div class="form-group">
+            <label for="usr">Email:</label>
+            <input type="text" class="form-control"  formControlName="login_Email" [ngClass]="{ 'is-invalid': account_Submitted && CAc_Form['login_Email'].errors }" autocomplete="off">
+        </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" formControlName="login_Password" [ngClass]="{ 'is-invalid': account_Submitted && CAc_Form['login_Password'].errors }" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Confirm Password:</label>
+            <input type="password" class="form-control" formControlName="login_Password_Confirm" [ngClass]="{ 'is-invalid': account_Submitted && CAc_Form['login_Password_Confirm'].errors }" autocomplete="off">
+          </div>
+
+          <div class="form-group div-button-allign">
+            <button type="button" class="btn btn-success" (click)=onCreate()>Create</button>
+          </div>
+
+        </form>
+
+
+    </div>    
+    <div class="col-sm-3"></div>
+</div>

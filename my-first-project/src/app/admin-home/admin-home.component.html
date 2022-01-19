@@ -1,0 +1,63 @@
+
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2"><button type="button" class="btn btn-danger" (click)="logOut()">Log out</button></div>
+    
+</div>
+<br>
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+
+        <thead>
+            <tr>
+              <th rowspan="2" style="text-align: center;">User Details</th>
+              
+            </tr>
+          </thead>
+    
+        <table class="table table-hover">           
+            <tbody>
+              <tr>
+                <td>Id</td>
+                <td>{{login_Details.login_Id}}</td>             
+
+              </tr>
+              <tr>               
+                <td>Name</td>
+                <td>{{login_Details.login_Name}}</td>
+
+              </tr>
+              <tr>               
+                <td>Email</td>
+                <td>{{login_Details.login_Email}}</td>               
+                
+
+              </tr>
+              <tr>                
+                <td>Password</td>               
+                <td>{{login_Details.login_Password}}</td>
+                
+              </tr>
+              <tr>                              
+                <td>Updated Date</td>
+                <td>{{login_Details.login_UpdatedDate | date: 'EEEE, MMMM d, y'}}</td>
+
+              </tr>
+              <tr>                
+                <td>Created Date</td>
+                <td>{{login_Details.login_CreatedDate | date: 'EEEE, MMMM d, y'}}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+    
+    </div>
+    
+    <div class="col-sm-3"></div>
+</div>
+
